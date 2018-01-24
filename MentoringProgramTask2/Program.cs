@@ -54,19 +54,15 @@ namespace MentoringProgramTask2
             {
                 try
                 {
-                    try
-                    {
-                        Console.WriteLine($"{j + 1} : {userStrings[j][0]}");
-                    }
-                    catch (IndexOutOfRangeException e)
-                    {
-                        throw new IndexOutOfRangeException("Input empty string!", e);
-                    }
-                    catch (NullReferenceException e)
-                    {
-                        throw new NullReferenceException("Input null string!", e);
-                    }
-
+                    Console.WriteLine($"{j + 1} : {userStrings[j][0]}");
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    Console.WriteLine("Input empty string!");
+                }
+                catch (NullReferenceException)
+                {
+                    Console.WriteLine("Input null string!");
                 }
                 catch (Exception e)
                 {

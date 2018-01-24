@@ -37,7 +37,7 @@ namespace StringToIntParserLibrary
 
             var resultInt = 0;
             var isNegative = false;
-            var rgx = new Regex(@"^-?\d+");
+            var rgx = new Regex(@"^-?\d+$");
 
             if (!rgx.IsMatch(str)) throw new FormatException($"Wrong format of number");
             if (str[0] == '-')
